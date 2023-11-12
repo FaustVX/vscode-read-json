@@ -1,14 +1,14 @@
 {
-	"name": "base-sample",
-	"displayName": "base-sample",
-	"description": "Base sample for other samples at Microsoft/vscode-extension-samples",
-	"version": "0.0.1",
-	"publisher": "vscode-samples",
-	"private": true,
+	"name": "read-json",
+	"displayName": "Read JSON value",
+	"description": "Read JSON Value (statically or dynamically)",
+	"version": "1.0.0",
+	"publisher": "FaustVX",
+	"private": false,
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/FaustVX/vscode-read-json"
 	},
 	"engines": {
 		"vscode": "^1.74.0"
@@ -21,8 +21,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "read-json.read",
+				"title": "Read JSON value"
 			}
 		]
 	},
@@ -39,5 +39,8 @@
 		"@typescript-eslint/parser": "^6.7.0",
 		"eslint": "^8.26.0",
 		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"json5": "^2.2.3"
 	}
 }
