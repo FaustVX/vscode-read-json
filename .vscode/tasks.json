@@ -51,7 +51,7 @@
             "type": "command",
             "command": "read-json.read",
             "args": {
-                "filePath": "info.json",
+                "filePath": "package.json",
                 "jsonPath": "version"
             }
         },
