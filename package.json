@@ -2,7 +2,7 @@
 	"name": "read-json",
 	"displayName": "Read JSON value",
 	"description": "Read JSON Value (statically or dynamically)",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "FaustVX",
 	"private": false,
 	"license": "MIT",
@@ -16,7 +16,9 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
+	"activationEvents": [
+		"onCommand:read-json.read"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
