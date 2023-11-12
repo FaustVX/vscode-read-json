@@ -31,6 +31,34 @@
 			"args": [
 				"publish"
 			],
-		}
-	]
+		},
+		{
+            "label": "upload new version",
+            "type": "shell",
+            "command": "./bump_version.sh",
+            "args": [
+                "v${input:version}",
+                "${input:message}"
+            ],
+            "windows": {
+                "command": ".\\bump_version.ps1"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "version",
+            "type": "command",
+            "command": "read-json.read",
+            "args": {
+                "filePath": "info.json",
+                "jsonPath": "version"
+            }
+        },
+        {
+            "id": "message",
+            "type": "promptString",
+            "description": "commit message (optional)"
+        }
+    ]
 }
