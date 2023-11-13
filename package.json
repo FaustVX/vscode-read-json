@@ -50,8 +50,5 @@
 		"eslint": "^8.26.0",
 		"vsce": "^1.75.0",
 		"typescript": "^5.2.2"
-},
-	"dependencies": {
-		"json5": "^2.2.3"
 	}
 }

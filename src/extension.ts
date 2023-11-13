@@ -1,5 +1,4 @@
 import * as vscode from 'vscode';
-import * as json5 from 'json5';
 
 interface Args {
 	filePath: string;
@@ -56,7 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
 			const uri = vscode.Uri.file(path);
 			const data = await vscode.workspace.fs.readFile(uri);
 			const file = Buffer.from(data).toString('utf8');
-			return json5.parse(file);
+			return JSON.parse(file);
 		}
 
 		async function showQuickPick(obj: any) : Promise<string | object | null> {
