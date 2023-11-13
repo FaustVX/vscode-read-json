@@ -26,7 +26,15 @@
 				"command": "read-json.read",
 				"title": "Read JSON value"
 			}
-		]
+		],
+		"menus": {
+			"explorer/context": [
+			{
+			  "command": "read-json.read",
+			  "group": "2_workspace"
+			}
+		   ]
+		   }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -42,7 +50,7 @@
 		"eslint": "^8.26.0",
 		"vsce": "^1.75.0",
 		"typescript": "^5.2.2"
-	},
+},
 	"dependencies": {
 		"json5": "^2.2.3"
 	}
